@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}"  type= "text/css">
+  </head>
+  <body>
+    {{msg}}
+    <div class="center">
+      <h1>Login</h1>
+      <form action="{{url_for('login')}}" method="POST">
+        <div class="txt_field">
+            <input type="email" name="mail" required><br>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" name="pass" required><br>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Sign In">
+      </form>
+    </div>
+
+  </body>
+</html>
+

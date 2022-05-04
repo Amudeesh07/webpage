@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leader board</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='leaderboard.css')}}"  type= "text/css">
+</head>
+<body>
+    <h1 style="text-align: center;">Leader board</h1>
+    
+    <div class="table-wrapper">
+		<table class="fl-table">
+			<tr> 
+				<th>Rank</th>
+				<th>Employee ID</th>
+				<th>Employee Name</th>
+				<th>Score</th>
+				<th>Stats</th>
+				
+
+			</tr>
+			{% for data in datas %}
+				<tr>
+					<td>{{data.RANKK}}</td>
+					<td>{{data.REGNO}}</td>
+					<td>{{data.NAME}}</td>
+					<td>{{data.SCORE}}</td>
+					<td><button class="button-5" role="button"><a id ="button3" href="{{url_for('stats',id=data.REGNO)}}">Stats</a></button></td>
+					</tr>
+			{% endfor %}
+		</table>
+	</div>
+</body>
+</html>

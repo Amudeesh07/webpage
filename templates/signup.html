@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='signup.css')}}"  type= "text/css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Signup</h1>
+      <form action="{{url_for('signup')}}" method='post'>
+        <div class="txt_field">
+            <input type='email' name="mail" required><br>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type='text' name="name" required><br>
+          <span></span>
+          <label>Name</label>
+        </div>
+        
+        <div class="txt_field">
+            <input type='text' name="id" required><br>
+          <span></span>
+          <label>Employee ID</label>
+        </div>
+
+        <div class="txt_field">
+            <input type='text' name="pass" required><br>
+          <span></span>
+          <label>Password</label>
+        </div>
+        
+        <input type='submit' value='Register'>
+        
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
+
+

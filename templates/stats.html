@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stats</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='stats.css')}}"  type= "text/css">
+</head>
+<body>
+    <h1 style="text-align:center">Stats</h1>
+    
+    <div class="table-wrapper">
+		<table class="fl-table">
+            <tr> 
+				<th>Qualities</th>
+				<th>Score</th>
+            </tr>
+            {% for data in datas %}
+                <tr><td>Leadership</td><td>{{data.q1}}</td></tr>
+                <tr><td>Team Work</td><td>{{data.q2}}</td></tr>
+                <tr><td>Creativity </td><td>{{data.q3}}</td></tr>
+                <tr><td>Problem Solving</td><td>{{data.q4}}</td></tr>
+                <tr><td>Punctuality</td><td>{{data.q5}}</td></tr>
+                <tr><td>Total</td><td>{{data.SCORE}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>         
